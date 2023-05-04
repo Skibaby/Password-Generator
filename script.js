@@ -24,6 +24,11 @@ function generatePassword(){
     if (promptUpper === true){
       chosenChar = chosenChar.concat (uppercaseCharacters);
     }
+    if (!promptSpecial && !promptLower && !promptNumber && !promptUpper){
+      alert('please choose at least one valid character type.');
+      return '';
+    }
+
 
     var chosenPass = ''
     for (var i = 0; i < charLength; i++){
